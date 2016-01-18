@@ -8,10 +8,9 @@ function Login() {
   $.post(
                '/login',
                {username: username, password:password},
-               function(){
-                
+               function(result){
+                 alert(result);
+
                }
-           ).fail(function(res){
-               alert("Error: " + res.getResponseHeader("error"));
-           });
+           );
 }
